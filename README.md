@@ -73,3 +73,7 @@ JuShaTa容器整体架构如下，模块间通过ClassLoader及SpringContext进�
 
 > 更多开发文档见 [开发手册](./docs/demo.md)
 
+## 六、 协议
+
+<img alt="Apache-2.0 license" src="https://lucene.apache.org/images/mantle-power.png" width="128">
+JuShaTa 基于 Apache-2.0 协议进行分发和使用，更多信息参见 [协议文件](LICENSE)。
