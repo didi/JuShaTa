@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.didiglobal.jushata</groupId>
+        <artifactId>jushata-samples</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>jushata-sample-test</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- jushata-sample-standard 模块标准引用 -->
+        <dependency>
+            <groupId>com.didiglobal.jushata</groupId>
+            <artifactId>jushata-sample-standard</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- jushata-sample-child1 / jushata-sample-child2 模块通过fat-jar加载 -->
+
+        <dependency>
+            <groupId>com.didiglobal.jushata</groupId>
+            <artifactId>jushata-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.didiglobal.jushata</groupId>
+            <artifactId>jushata-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

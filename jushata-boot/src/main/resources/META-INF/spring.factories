@@ -1,0 +1,7 @@
+
+org.springframework.context.ApplicationListener=\
+  com.didiglobal.jushata.springboot.JushataApplicationReadyEventListener
+
+com.didiglobal.jushata.module.JushataModuleLoader=\
+  com.didiglobal.jushata.springboot.JushataSpringBootModuleLoader,\
+  com.didiglobal.jushata.module.JushataDirectoryModuleLoader

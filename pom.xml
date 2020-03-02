@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+
+    <groupId>com.didiglobal.jushata</groupId>
+    <artifactId>jushata-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>jushata-parent</name>
+    <packaging>pom</packaging>
+    <description>The parent project of jushata</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring.version>5.0.7.RELEASE</spring.version>
+        <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
+        <jushata-boot.version>1.0.0-SNAPSHOT</jushata-boot.version>
+        <spring-boot-loader.version>2.1.4.RELEASE</spring-boot-loader.version>
+        <jushata-boot-autoconfigure.version>1.0.0-SNAPSHOT</jushata-boot-autoconfigure.version>
+        <spring-data-mongodb.version>2.0.8.RELEASE</spring-data-mongodb.version>
+        <guava.version>19.0</guava.version>
+        <lombok.version>1.16.22</lombok.version>
+        <jackson.version>2.9.6</jackson.version>
+        <fastjson.version>1.2.58</fastjson.version>
+    </properties>
+
+    <modules>
+        <module>jushata-boot</module>
+        <module>jushata-boot-autoconfigure</module>
+        <module>jushata-samples</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.didiglobal.jushata</groupId>
+                <artifactId>jushata-boot</artifactId>
+                <version>${jushata-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.didiglobal.jushata</groupId>
+                <artifactId>jushata-boot-autoconfigure</artifactId>
+                <version>${jushata-boot-autoconfigure.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-parameter-names</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-mongodb</artifactId>
+                <version>${spring-data-mongodb.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>3.0.1</version>
+                    <configuration>
+                        <attach>true</attach>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

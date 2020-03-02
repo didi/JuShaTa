@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationListener=\
+  com.didiglobal.jushata.autoconfigure.ExcludeAutoConfigurationApplicationListener
+
+org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration=\
+  com.didiglobal.jushata.autoconfigure.actuate.WebMvcEndpointManagementContextConfiguration
