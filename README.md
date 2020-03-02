@@ -24,7 +24,7 @@
 
 ### 三、解决方案
 
-基于以上问题，Jushata提供一种容器化的思路来解决，正于之前提到的Tomcat一样，将模块放到Jushata容器中，由容器来进行生命周期管理，容器提供模块隔离以及模块动态装载卸载的能力。
+基于以上问题，JuShaTa提供一种容器化的思路来解决，正于之前提到的Tomcat一样，将模块放到JuShaTa容器中，由容器来进行生命周期管理，容器提供模块隔离以及模块动态装载卸载的能力。
 
 #### 1、开箱即用
 
@@ -49,17 +49,27 @@
 
 ### 四、整体架构：
 
-Jushata容器整体架构如下，模块间通过ClassLoader及SpringContext进行隔离。
+JuShaTa容器整体架构如下，模块间通过ClassLoader及SpringContext进行隔离。
 
 ![image](./docs/jushata.png)
 
 
-### 五、示例：
+### 五、开发示例：
 
-提供 jushata-samples 模块进行示例演示（测试前先运行mvn package生成模块打包）：
+#### 1、在项目的pom文件中引入依赖，将你的SpringBoot应用打成fat-jar后放到某个目录，将配置项“jushata.modules-file”值设置为该目录地址即可启动项目运行。
+
+```
+<dependency>
+    <groupId>com.didiglobal.jushata</groupId>
+    <artifactId>jushata-boot</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+#### 2、提供 jushata-samples 模块进行示例演示（测试前先运行mvn package生成模块打包）：
 
 - jushata-sample-standard 演示对原生 springboot-starter 模块的兼容的能力
 - jushata-sample-child1 和 jushata-sample-child2 演示fat-jar模块上下文隔离及类隔离的能力
 
-更多开发文档见 [开发手册](./docs/demo.md)
+> 更多开发文档见 [开发手册](./docs/demo.md)
 

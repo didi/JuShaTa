@@ -21,9 +21,9 @@
         <java.version>1.8</java.version>
         <spring.version>5.0.7.RELEASE</spring.version>
         <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
-        <jushata-boot.version>1.0.0-SNAPSHOT</jushata-boot.version>
         <spring-boot-loader.version>2.1.4.RELEASE</spring-boot-loader.version>
-        <jushata-boot-autoconfigure.version>1.0.0-SNAPSHOT</jushata-boot-autoconfigure.version>
+        <jushata-boot.version>1.0.0</jushata-boot.version>
+        <jushata-boot-autoconfigure.version>1.0.0</jushata-boot-autoconfigure.version>
         <spring-data-mongodb.version>2.0.8.RELEASE</spring-data-mongodb.version>
         <guava.version>19.0</guava.version>
         <lombok.version>1.16.22</lombok.version>
